@@ -44,16 +44,23 @@ class App extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.editedPizza);
-    fetch(`${API}/${this.state.editedPizza.id}`, {
+    const editedPizza = this.state.editedPizza;
+
+    fetch(`${API}/${editedPizza.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(this.state.editedPizza),
+      body: JSON.stringify(editedPizza),
     })
       .then((res) => {
+        const pizzaIndex = this.state.pizzas.findIndex(
+          (element) => element.id == editedPizza.id
+        );
+        let newArray = [...this.state.pizzas];
+        newArray[pizzaIndex] = editedPizza;
         this.setState({
+          pizzas: newArray,
           editedPizza: {},
         });
       })

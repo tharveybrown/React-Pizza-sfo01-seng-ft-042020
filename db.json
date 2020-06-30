@@ -2,15 +2,15 @@
   "pizzas": [
     {
       "id": 1,
-      "topping": "Plain",
+      "topping": "Plain with Broccoli",
       "size": "Small",
       "vegetarian": true
     },
     {
       "id": 2,
-      "topping": "Cheese",
-      "size": "Large",
-      "vegetarian": true
+      "topping": "Cheese and Pepperonisause",
+      "size": "Medium",
+      "vegetarian": false
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
     {
       "id": 6,
       "topping": "Spinach",
-      "size": "Medium",
+      "size": "Large",
       "vegetarian": true
     },
     {
@@ -52,7 +52,7 @@
       "id": 9,
       "topping": "Salami",
       "size": "Large",
-      "vegetarian": false
+      "vegetarian": true
     },
     {
       "id": 10,
